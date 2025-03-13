@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
 }
 
 img {
@@ -14,25 +17,85 @@ img {
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   padding-inline: 1rem;
+  justify-content: space-between;
 }
 
 .left,
 .right {
+  width: 30%;
+}
+
+.left,
+.right,
+.center {
   display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: start;
+}
+
+.right {
+  justify-content: end;
 }
 
 .navbar button {
   padding-block: 2rem;
   transition: background-color 400ms;
-    width: 100px;
+  width: 100px;
+  text-transform: uppercase;
 }
 
 .navbar button:hover {
   background-color: #eee;
+}
+
+.hero {
+  min-height: calc(100vh - 79px);
+  background-image: url(https://www.fredperry.com/media/widget/cache/C/A/96f2fe76d6a6203a6684677b813a9866/media/wysiwyg/2025/Q1/fps/CAMPAIGN-HERO-DESKTOP-01b.jpg);
+  background-size: cover;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+
+.hero-section {
+  margin-bottom: 4rem;
+  display: grid;
+  gap: 1rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero * {
+  text-align: center;
+}
+
+.hero .btns {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.hero p {
+  text-transform: uppercase;
+}
+
+.hero button {
+  width: 8rem;
+  padding-block: 1rem;
+  background-color: white;
 }
