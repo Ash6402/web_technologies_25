@@ -54,7 +54,7 @@ button {
 }
 
 .navbar button:hover {
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
 
 .hero {
@@ -94,8 +94,135 @@ button {
   text-transform: uppercase;
 }
 
-.hero button {
-  width: 8rem;
+.secondary-btn {
+  padding-inline: 1.5rem;
   padding-block: 1rem;
   background-color: white;
+  width: fit-content;
+}
+
+.section1 {
+  padding-block: 4rem;
+  display: grid;
+  justify-items: center;
+  background-color: #f6f6f6;
+}
+
+.carousel{
+    display: flex;
+    gap: 4rem;
+}
+
+.item-img {
+    max-width: 200px;
+}
+
+.membership{
+    background-color: #111;
+    color: #fff;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.membership div{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.band{
+    position: absolute;
+    width: max(35vw, 400px);
+}
+
+.band:first-of-type{
+    left: -10vw;
+    rotate: -40deg;
+}
+
+.band:last-of-type{
+    right: -10vw;
+    top: 12vw;
+    rotate: 30deg;
+}
+
+.section-3{
+    justify-content: space-around;
+}
+
+.section-3 img{
+    max-width: max(38vw, 450px);
+}
+
+/* =========================================================== */
+/* ======================== Utilities ======================== */
+/* =========================================================== */
+
+.text-center{
+    text-align: center;
+}
+
+.text-gray{
+    color: #333;
+}
+
+.text-sm{
+    font-size: 90%;
+}
+
+.text-m{
+    font-size: 95%;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-12{
+    margin-top: 6rem;
+}
+
+.w-400 {
+  font-weight: 400;
+}
+
+.flex{
+    display: flex;
+}
+
+.mx-auto{
+    margin-inline: auto;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.grid{
+    display: grid;
+}
+
+.gap-1{
+    gap: 0.5rem;   
+}
+
+.gap-2{
+    gap: 1rem;
+}
+
+.max-width-lg{
+    max-width: 1200px;
 }

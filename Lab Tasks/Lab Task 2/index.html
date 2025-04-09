@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike Sneakers Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">NikeStyle</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="#categories">Sale</a>
+            </li>
+          </ul>
+
+          <div class="d-flex gap-2">
+            <a
+              href="#"
+              id="cart-button"
+              class="btn btn-outline-dark position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+            >
+              🛒 Cart
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
+                <span class="visually-hidden">cart items</span>
+              </span>
+            </a>
+            <a href="#" class="btn btn-dark">Login / Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero text-center">
+      <div class="container">
+        <h1>Step Into Style</h1>
+        <p class="lead">
+          Discover the latest Nike sneakers for every occasion.
+        </p>
+        <a href="#products" class="btn btn-light btn-lg mt-3">Shop Now</a>
+      </div>
+    </div>
+
+    <section id="products" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Featured Sneakers</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/7a4adf78-3e6c-4e03-80a6-2742f8cc42b1/air-max-97-shoes-RRb3Wz.png"
+                class="card-img-top"
+                alt="Air Max 97"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nike Air Max 97</h5>
+                <p class="card-text">$170</p>
+                <button
+                  class="btn btn-outline-dark w-100 add-to-cart"
+                  data-id="1"
+                  data-name="Nike Air Max 97"
+                  data-price="170"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/7bcbeb11-dce9-4b9e-a9e3-cc19a81f6888/air-force-1-07-shoes-CQ9j7p.png"
+                class="card-img-top"
+                alt="Air Force 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nike Air Force 1</h5>
+                <p class="card-text">$110</p>
+                <button
+                  class="btn btn-outline-dark w-100 add-to-cart"
+                  data-id="2"
+                  data-name="Nike Air Force 1"
+                  data-price="110"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <img
+                src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/b0f6b97e-4bc2-487c-925e-e7d42d657fd7/air-jordan-1-mid-shoes-0rLJfh.png"
+                class="card-img-top"
+                alt="Air Jordan 1 Mid"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Air Jordan 1 Mid</h5>
+                <p class="card-text">$135</p>
+                <button
+                  class="btn btn-outline-dark w-100 add-to-cart"
+                  data-id="3"
+                  data-name="Air Jordan 1 Mid"
+                  data-price="135"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card review-card p-3">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  "Absolutely love the Air Jordans. Super comfy and stylish!"
+                </p>
+                <footer class="blockquote-footer mt-2">Alex M.</footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card review-card p-3">
+              <blockquote class="blockquote mb-0">
+                <p>"Fast shipping and amazing quality. Will buy again!"</p>
+                <footer class="blockquote-footer mt-2">Jamie L.</footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card review-card p-3">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  "Customer service was excellent, and the shoes fit perfectly."
+                </p>
+                <footer class="blockquote-footer mt-2">Morgan K.</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5">Shop by Category</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top"
+                alt="Men"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Men</h5>
+                <a href="#" class="btn btn-outline-dark">Shop Men</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1620332514527-76b7e1b0bba1?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top"
+                alt="Women"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Women</h5>
+                <a href="#" class="btn btn-outline-dark">Shop Women</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1618354691373-f36f8e3e6b56?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top"
+                alt="Kids"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kids</h5>
+                <a href="#" class="btn btn-outline-dark">Shop Kids</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1633431957224-84ab9f24ed8c?auto=format&fit=crop&w=1000&q=80"
+                class="card-img-top"
+                alt="New Arrivals"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">New Arrivals</h5>
+                <a href="#" class="btn btn-outline-dark">Shop Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1528701800489-20b7b79c7de5?auto=format&fit=crop&w=1000&q=80"
+                class="card-img-top"
+                alt="Sale"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Sale</h5>
+                <a href="#" class="btn btn-outline-dark">See Deals</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter text-center">
+      <div class="container">
+        <h2 class="mb-4">Stay in the Loop</h2>
+        <p class="mb-4">
+          Get the latest updates and exclusive offers straight to your inbox.
+        </p>
+        <form class="row g-2 justify-content-center">
+          <div class="col-md-4">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-light w-100">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer text-center">
+      <div class="container">
+        <p>&copy; 2025 NikeStore. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group mb-3" id="cart-items"></ul>
+            <h6>Total: $<span id="cart-total">0.00</span></h6>
+          </div>
+          <div class="modal-footer">
+            <a href="checkout.html" class="btn btn-dark">Checkout</a>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
