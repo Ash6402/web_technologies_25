@@ -101,7 +101,7 @@ button {
   width: fit-content;
 }
 
-.section1 {
+.section-1 {
   padding-block: 4rem;
   display: grid;
   justify-items: center;
@@ -147,12 +147,86 @@ button {
     rotate: 30deg;
 }
 
-.section-3{
-    justify-content: space-around;
+.image-section{
+    margin-inline: auto;
+    max-width: 1500px;
+    display: flex;
+    gap: 7rem;
 }
 
-.section-3 img{
+.image-section > div{
     max-width: max(38vw, 450px);
+}
+
+.footer{
+  background-color: #f6f6f6;
+  padding-block: 4rem;
+}
+
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.footer-container > div{
+  max-width: 250px;
+}
+
+.footer-container > div > p:first-of-type {
+  text-transform: uppercase;
+  font-size: 85%;
+  color: gray;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.footer article h3{
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer * {
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: grid;
+  gap: 0.1rem;
+}
+
+.footer li{
+  font-size: 90%;
+  font-weight: 300;
+  color: #333;
+}
+
+.image-with-overlay {
+  position: relative;
+}
+
+.image-with-overlay:hover .overlay{
+  opacity: 1;
+}
+
+.overlay {
+  transition: opacity 200ms;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+
+.overlay button {
+  position: relative;
+  bottom: 130px;
 }
 
 /* =========================================================== */
@@ -173,6 +247,10 @@ button {
 
 .text-m{
     font-size: 95%;
+}
+
+.text-lg{
+  font-size: 120%;
 }
 
 .uppercase{
@@ -223,6 +301,6 @@ button {
     gap: 1rem;
 }
 
-.max-width-lg{
+.max-w-lg{
     max-width: 1200px;
 }
