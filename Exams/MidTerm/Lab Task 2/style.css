@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+    background: url('https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1196,c_limit/67b396b4-528f-4219-99a8-17c2991ea6bf/nike-just-do-it.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.product-card img {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.review-card {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.newsletter {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 20px 0;
+}
