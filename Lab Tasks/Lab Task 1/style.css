@@ -1,41 +1,337 @@
-body {
-  font-family: "Segoe UI", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  padding-inline: 1rem;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  width: 30%;
+}
+
+.left,
+.right,
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: start;
+}
+
+.right {
+  justify-content: end;
+}
+
+.navbar button {
+  padding-block: 2rem;
+  transition: background-color 400ms;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.navbar button:hover {
+  background-color: #f6f6f6;
 }
 
 .hero {
-  background: url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1196,c_limit/67b396b4-528f-4219-99a8-17c2991ea6bf/nike-just-do-it.png")
-    no-repeat center center;
+  min-height: calc(100vh - 79px);
+  background-image: url(https://www.fredperry.com/media/widget/cache/C/A/96f2fe76d6a6203a6684677b813a9866/media/wysiwyg/2025/Q1/fps/CAMPAIGN-HERO-DESKTOP-01b.jpg);
   background-size: cover;
-  color: white;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+
+.hero-section {
+  margin-bottom: 4rem;
+  display: grid;
+  gap: 1rem;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 3rem;
 }
 
-.product-card img {
-  max-height: 200px;
-  object-fit: contain;
+.hero * {
+  text-align: center;
 }
 
-.review-card {
-  background-color: #f8f9fa;
-  border: none;
+.hero .btns {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-inline: auto;
 }
 
-.newsletter {
-  background-color: #111;
-  color: #fff;
-  padding: 60px 0;
+.hero p {
+  text-transform: uppercase;
 }
 
-.footer {
-  background-color: #222;
-  color: #aaa;
-  padding: 20px 0;
+.secondary-btn {
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  background-color: white;
+  width: fit-content;
+}
+
+.section-1 {
+  padding-block: 4rem;
+  display: grid;
+  /* justify-items: center; */
+  background-color: #f6f6f6;
+}
+
+.section-1 {
+  max-width: 1400px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-1 button {
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.carousel{
+    display: flex;
+    gap: 4rem;
+}
+
+.item-img {
+    max-width: 200px;
+}
+
+.membership{
+    background-color: #111;
+    color: #fff;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.membership div{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.band{
+    position: absolute;
+    width: max(35vw, 400px);
+}
+
+.band:first-of-type{
+    left: -10vw;
+    rotate: -40deg;
+}
+
+.band:last-of-type{
+    right: -10vw;
+    top: 12vw;
+    rotate: 30deg;
+}
+
+.image-section{
+    margin-inline: auto;
+    max-width: 1500px;
+    display: flex;
+    gap: 7rem;
+}
+
+.image-section > div{
+    max-width: max(38vw, 450px);
+}
+
+.footer{
+  background-color: #f6f6f6;
+  padding-block: 4rem;
+}
+
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.footer-container > div{
+  max-width: 250px;
+}
+
+.footer-container > div > p:first-of-type {
+  text-transform: uppercase;
+  font-size: 85%;
+  color: gray;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.footer article h3{
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer * {
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  display: grid;
+  gap: 0.1rem;
+}
+
+.footer li{
+  font-size: 90%;
+  font-weight: 300;
+  color: #333;
+}
+
+.image-with-overlay {
+  position: relative;
+}
+
+.image-with-overlay:hover .overlay{
+  opacity: 1;
+}
+
+.overlay {
+  transition: opacity 200ms;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+}
+
+.overlay button {
+  position: relative;
+  bottom: 130px;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .row {
+  margin: 0;
+}
+
+.carousel .col-4 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.carousel img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* =========================================================== */
+/* ======================== Utilities ======================== */
+/* =========================================================== */
+
+.text-center{
+    text-align: center;
+}
+
+.text-gray{
+    color: #333;
+}
+
+.text-sm{
+    font-size: 90%;
+}
+
+.text-m{
+    font-size: 95%;
+}
+
+.text-lg{
+  font-size: 120%;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-12{
+    margin-top: 6rem;
+}
+
+.w-400 {
+  font-weight: 400;
+}
+
+.flex{
+    display: flex;
+}
+
+.mx-auto{
+    margin-inline: auto;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.grid{
+    display: grid;
+}
+
+.gap-1{
+    gap: 0.5rem;   
+}
+
+.gap-2{
+    gap: 1rem;
+}
+
+.max-w-lg{
+    max-width: 1200px;
 }

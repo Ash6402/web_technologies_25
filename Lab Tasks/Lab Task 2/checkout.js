@@ -3,7 +3,6 @@ $(document).ready(function () {
   const orderSummary = $("#order-summary");
   let total = 0;
 
-  // Render cart items
   cart.forEach(item => {
     total += item.price;
     orderSummary.append(`
@@ -16,35 +15,58 @@ $(document).ready(function () {
 
   $("#checkout-total").text(total.toFixed(2));
 
-  // Form validation
   $("#checkout-form").on("submit", function (e) {
     e.preventDefault();
+
+    $(".form-control").removeClass("is-invalid");
     let isValid = true;
 
     const name = $("#name");
-    const email = $("#email");
-    const address = $("#address");
-
-    if (!name.val().trim()) {
+    if (!name.val().trim() || !/^[A-Za-z\s]+$/.test(name.val())) {
       name.addClass("is-invalid");
       isValid = false;
-    } else {
-      name.removeClass("is-invalid");
     }
 
+    const email = $("#email");
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!emailPattern.test(email.val())) {
       email.addClass("is-invalid");
       isValid = false;
-    } else {
-      email.removeClass("is-invalid");
     }
 
+    const phone = $("#phone");
+    const phonePattern = /^\d{10,15}$/;
+    if (!phonePattern.test(phone.val())) {
+      phone.addClass("is-invalid");
+      isValid = false;
+    }
+
+    const address = $("#address");
     if (!address.val().trim()) {
       address.addClass("is-invalid");
       isValid = false;
-    } else {
-      address.removeClass("is-invalid");
+    }
+
+    const cardNumber = $("#card-number");
+    const cardNumberPattern = /^\d{16}$/;
+    if (!cardNumberPattern.test(cardNumber.val())) {
+      cardNumber.addClass("is-invalid");
+      isValid = false;
+    }
+
+    const expiryDate = $("#expiry-date");
+    const currentDate = new Date();
+    const expiry = new Date(expiryDate.val());
+    if (!expiryDate.val() || expiry <= currentDate) {
+      expiryDate.addClass("is-invalid");
+      isValid = false;
+    }
+
+    const cvv = $("#cvv");
+    const cvvPattern = /^\d{3}$/;
+    if (!cvvPattern.test(cvv.val())) {
+      cvv.addClass("is-invalid");
+      isValid = false;
     }
 
     if (isValid) {

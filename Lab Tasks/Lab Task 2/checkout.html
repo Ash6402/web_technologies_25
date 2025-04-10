@@ -15,20 +15,44 @@
         <form id="checkout-form" novalidate>
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" required>
-            <div class="invalid-feedback">Please enter your full name.</div>
+            <input type="text" class="form-control" id="name" required pattern="[A-Za-z\s]+" title="Only alphabets are allowed" />
+            <div class="invalid-feedback">Please enter your full name with only alphabets.</div>
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" id="email" required />
             <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" required pattern="^\d{10,15}$" title="Only digits allowed. Minimum 10, maximum 15 digits." />
+            <div class="invalid-feedback">Please enter a valid phone number (10-15 digits).</div>
           </div>
 
           <div class="mb-3">
             <label for="address" class="form-label">Shipping Address</label>
             <textarea class="form-control" id="address" rows="3" required></textarea>
             <div class="invalid-feedback">Please enter your shipping address.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="card-number" class="form-label">Credit Card Number</label>
+            <input type="text" class="form-control" id="card-number" required pattern="^\d{16}$" maxlength="16" title="Credit card number must be exactly 16 digits." />
+            <div class="invalid-feedback">Credit card number must be exactly 16 digits.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="expiry-date" class="form-label">Expiry Date</label>
+            <input type="month" class="form-control" id="expiry-date" required min="" />
+            <div class="invalid-feedback">Please enter a valid future expiry date.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="cvv" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cvv" required pattern="^\d{3}$" maxlength="3" title="CVV must be exactly 3 digits." />
+            <div class="invalid-feedback">CVV must be exactly 3 digits.</div>
           </div>
 
           <button type="submit" class="btn btn-dark">Place Order</button>
