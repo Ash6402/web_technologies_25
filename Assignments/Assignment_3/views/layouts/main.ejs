@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel= "stylesheet" href="/css/style.css">
+    <link rel= "stylesheet" href="/css/index.css">
     <link rel="icon" href="assets/logo.svg" />
   </head>
   <body>
@@ -28,11 +29,14 @@
             <li><a href="/auth/login">Login</a></li>
             <li><a href="/auth/signup">Sign Up</a></li>
           </ul>
+        <% } else { %>
+          <h2 class="text-center">Hello, <%= user.name %> </h2>
+          <a href="/my-orders">My Orders</a>
         <% } %>
       </div>
     </nav>
     </header>
-    <main>
+    <main style="min-height: 470px; padding-block: 0.5rem;">
       <%- body %> 
     </main>
     <footer class="footer mt-12">

@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose')
+
+require('dotenv').config()
 
 // enable forms
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +15,8 @@ const session = require('express-session');
 const flash = require('connect-flash');
 
 // routes
-const authRoutes = require("./routes/auth")
+const authRoutes = require("./routes/auth.route")
+const myOrderRoutes = require("./routes/my-order.route")
 
 // data for home page
 const products = require("./data/products.json")
@@ -38,10 +42,17 @@ app.use((req, res, next) => {
     next()
 })
 
+mongoose.connect(process.env.MONGODB_URI).then(
+    () => console.log("Connected to MongoDB cluster")
+)
+
 app.get('/', (_, res) => {
   res.render('index', { title: 'Fred Perry', products });
 });
 
 app.use("/auth", authRoutes)
+app.use("/my-orders", myOrderRoutes)
 
-app.listen(8000);
+app.listen(8000, () => {
+    console.log("Listening on port 8080")
+});
