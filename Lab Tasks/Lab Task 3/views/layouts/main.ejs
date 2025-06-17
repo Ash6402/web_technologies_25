@@ -34,11 +34,14 @@
         <% } else { %>
           <h2 class="text-center">Hello, <%= user.name %> </h2>
           <a href="/my-orders">My Orders</a>
+          <form action="/auth/logout" method="POST">
+            <button class="logout-btn">Logout</button>
+          </form>
         <% } %>
       </div>
     </nav>
     </header>
-    <main style="min-height: 470px; padding-block: 0.5rem;">
+    <main>
       <%- body %> 
     </main>
     <footer class="footer mt-12">

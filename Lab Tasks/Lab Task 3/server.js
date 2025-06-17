@@ -15,11 +15,13 @@ const session = require('express-session');
 const flash = require('connect-flash');
 
 // routes
-const authRoutes = require("./routes/auth.route")
-const myOrderRoutes = require("./routes/my-order.route")
+const homeRoutes = require("./routes/home.routes")
+const authRoutes = require("./routes/auth.routes")
+const myOrderRoutes = require("./routes/my-order.routes")
+const productRoutes = require("./routes/product.routes")
 
 // data for home page
-const products = require("./data/products.json")
+// const products = require("./data/products.json")
 
 app.set('view engine', 'ejs');
 app.use(expressLayouts); 
@@ -46,13 +48,11 @@ mongoose.connect(process.env.MONGODB_URI).then(
     () => console.log("Connected to MongoDB cluster")
 )
 
-app.get('/', (_, res) => {
-  res.render('index', { title: 'Fred Perry', products });
-});
-
+app.use("/", homeRoutes)
 app.use("/auth", authRoutes)
 app.use("/my-orders", myOrderRoutes)
+app.use("/product", productRoutes)
 
-app.listen(8000, () => {
-    console.log("Listening on port 8080")
+app.listen(9000, () => {
+    console.log("Listening on port 9000")
 });

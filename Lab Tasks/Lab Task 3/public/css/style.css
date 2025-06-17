@@ -81,7 +81,7 @@ button {
   text-align: center;
 }
 
-.account-dropdown ul li a {
+.account-dropdown ul li a, .navbar a {
   color: black;
   text-decoration: none;
   display: block;
@@ -93,8 +93,25 @@ button {
   cursor: pointer;
 }
 
-.account-dropdown ul li a:hover {
+.account-dropdown ul li a:hover, .navbar a:hover {
   background-color: #f6f6f6;
+}
+
+.navbar a {
+  margin-top: 1rem;
+}
+
+.navbar .logout-btn {
+  width: 100%;
+  padding-block: 0.5rem; 
+  color: black;
+  background-color: rgba(255, 0, 0, 0.7);
+  margin-top: 2rem;
+}
+
+.navbar .logout-btn:hover {
+  background-color: crimson;
+  color: white;
 }
 
 .hero {

@@ -47,3 +47,8 @@ exports.postSignup = async (req, res) => {
 
   res.redirect("login");
 };
+
+exports.logout = (req, res) => {
+  req.session.user = null;
+  res.redirect("/auth/login");
+};
