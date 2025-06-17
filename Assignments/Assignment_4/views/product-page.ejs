@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/product.css" />
+
+<div class="product-page">
+  <!-- Left Section -->
+  <div class="product-info">
+    <h2>Product Information</h2>
+    <p><%= product.description || "This is a high-quality product crafted with premium materials and timeless style." %></p>
+
+    <h3>Shipping & Returns</h3>
+    <ul>
+      <li>Free standard shipping on orders over $5,000</li>
+      <li>Easy 7-day return policy</li>
+      <li>Cash on Delivery available</li>
+    </ul>
+
+    <h3>Care Instructions</h3>
+    <ul>
+      <li>Machine wash cold with like colors</li>
+      <li>Do not bleach</li>
+      <li>Tumble dry low or hang dry</li>
+    </ul>
+  </div>
+
+  <!-- Center Section -->
+  <div class="product-image">
+    <img src="/<%= product.url %>" alt="<%= product.name %>">
+  </div>
+
+  <!-- Right Section -->
+  <div class="product-purchase">
+    <h1><%= product.name %></h1>
+    <p class="price">$ <%= product.price.toLocaleString() %></p>
+
+    <div class="sizes">
+      <div class="size">XS</div>
+      <div class="size">S</div>
+      <div class="size selected">M</div>
+      <div class="size">L</div>
+      <div class="size">XL</div>
+      <div class="size">XXL</div>
+    </div>
+
+    <form action="/my-orders/add" method="POST" class="order-form">
+      <input type="hidden" name="productId" value="<%= product._id %>">
+      
+      <div class="quantity">
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" id="quantity" min="1" value="1">
+      </div>
+
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+  <script src="js/product.js"></script>
+</div>
