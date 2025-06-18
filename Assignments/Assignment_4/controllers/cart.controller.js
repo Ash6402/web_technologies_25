@@ -4,14 +4,14 @@ exports.getCart = async (req, res) => {
   let products = [];
   const cart = req.session.cart;
 
-  console.log(cart);
+  // console.log(cart);
 
   if (Array.isArray(cart)) {
     const promises = cart.map(({ id }) => Product.findOne({ _id: id }));
     products = await Promise.all(promises);
   }
 
-  console.log(products);
+  // console.log(products);
 
   res.render("cart", {
     title: "Cart",

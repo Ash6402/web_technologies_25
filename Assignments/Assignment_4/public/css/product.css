@@ -144,3 +144,8 @@
 .hide {
   transform: translateX(5000px);
 }
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

@@ -60,3 +60,22 @@ td img {
   color: white;
   padding: 8px 4px;
 }
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.checkout {
+  background-color: #333;
+  cursor: pointer;
+  color: #eee;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 105%;
+}
+
+.checkout:hover {
+  background-color: #444;
+}

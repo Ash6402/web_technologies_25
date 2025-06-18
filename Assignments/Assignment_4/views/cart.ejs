@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/cart.css" />
+<% let total = 0 %>
 <div class="cart-container">
   <h2>Cart</h2>
   <% if(products.length > 0) { %>
@@ -32,6 +33,7 @@
           </td>
           <td>
             <%= quantity * p.price %>
+            <% total += (quantity) * (p.price) %>
           </td>
           <td>
             <form action="my-orders/cart/remove" method="POST">
@@ -42,6 +44,10 @@
         </tr>
       <% }) %>
       </table>
+      <p class="total">Total: <%= total %> $</p>
+      <a href="/checkout">
+        <button class="checkout">Proceed to checkout</button>
+     </a>
   <% } else { %>
   <p style="color: #333; margin-top: 24px;">Cart is Empty</p>
   <% } %>
