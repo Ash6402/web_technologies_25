@@ -1,0 +1,138 @@
+<div class="hero">
+  <div class="hero-section">
+    <div>
+      <p>Mens & Womens</p>
+      <h1>The Fred Perry Shirt</h1>
+    </div>
+    <div class="btns">
+      <button class="secondary-btn">Shop Men's</button>
+      <button class="secondary-btn">Shop Women's</button>
+    </div>
+  </div>
+</div>
+<div class="section-1 mt-12">
+  <h2 class="w-400">T-Shirts</h2>
+  <button class="secondary-btn mt-2">Shop Now</button>
+  <div class="carousel mt-2">
+  <% products.t_shirts.forEach((item) => { %>
+      <div class="carousel-item">
+      <a href="/product/<%= item._id %>">
+        <img 
+          class="item-img"
+          src="<%= item.url %>"
+          alt="<%= item.name %>"
+        />
+      </a>
+       <p class="text-sm mt-2 text-center">
+        <%= item.name %>
+       </p>
+      </div>
+    <% }) %>
+  </div>
+</div>
+<div class="membership mt-12">
+  <div>
+    <p>A membership for our most loyal fans</p>
+    <p class="text-center text-sm">
+      Sign up to access free delivery and more exclusive members-only
+      benefits now
+    </p>
+    <button class="secondary-btn">Find out more</button>
+    <img
+      class="band"
+      src="./assets/fp-loyalty-wrist-band.png"
+      alt="loyalty wristband"
+    />
+    <img
+      class="band"
+      src="./assets/fp-loyalty-wrist-band.png"
+      alt="loyalty wristband"
+    />
+  </div>
+</div>
+<div class="image-section mx-auto mt-12">
+  <div class="image-with-overlay">
+    <img src="./assets/Q2_HP_Men_s_NR.jpg" />
+    <div class="text-center grid gap-1 mt-2">
+      <p class="text-m uppercase">Men's</p>
+      <p>New Release</p>
+      <p class="text-sm">This just in - shop our latest arrival</p>
+    </div>
+    <div class="overlay"><button class="secondary-btn">Shop Now</button></div>
+  </div>
+  <div class="image-with-overlay">
+    <img src="./assets/Q2_HP_Sweatshirt.jpg" />
+    <div class="text-center grid gap-1 mt-2">
+      <p class="text-m uppercase">Men's</p>
+      <p>New Release</p>
+      <p class="text-sm">This just in - shop our latest arrival</p>
+    </div>
+    <div class="overlay"><button class="secondary-btn">Shop Now</button></div>
+  </div>
+</div>
+<div class="section-1 mt-12">
+  <h2 class="w-400">Jackets</h2>
+  <button class="secondary-btn mt-2">Shop Now</button>
+  <div class="carousel mt-2">
+    <% products.jackets.forEach((item) => { %>
+    <div class="carousel-item">
+      <img 
+        class="item-img"
+        src="<%= item.url %>"
+        alt="<%= item.name %>"
+      />
+      <p class="text-sm mt-2 text-center">
+        <%= item.name %>
+      </p>
+    </div>
+    <% }) %>
+  </div>
+  <div class="image-section mx-auto mt-12">
+    <div class="image-with-overlay">
+      <img src="./assets/Q4-45-25.jpg" />
+      <div class="text-center grid gap-1 mt-2">
+        <p class="text-m uppercase">Sub Culture</p>
+        <p class="text-lg">The making of a subcultural classic</p>
+        <p class="text-sm">The Fred Perry Shirt</p>
+      </div>
+      <div class="overlay"><button class="secondary-btn">Read More</button></div>
+    </div>
+    <div class="image-with-overlay">
+      <img src="./assets/FPP100_9_LQ_45.jpg" />
+      <div class="text-center grid gap-1 mt-2">
+        <p class="text-m uppercase">Playlist</p>
+        <p class="text-lg">100 Club Recommends</p>
+        <p class="text-sm">100 Club End of Year Series</p>
+      </div>
+      <div class="overlay"><button class="secondary-btn">Read More</button></div>
+    </div>
+    <div class="image-with-overlay">
+      <img src="./assets/6B.jpg" />
+      <div class="text-center grid gap-1 mt-2">
+        <p class="text-m uppercase">Subculture</p>
+        <p> Northern Soul</p>
+        <p class="text-sm">We've been documenting the northern soul scene, beloved by Fred Perry Fans</p>
+      </div>
+      <div class="overlay"><button class="secondary-btn">Read More</button></div>
+    </div>
+  </div>
+  <div class="image-section mx-auto mt-12">
+    <div class="image-with-overlay">
+      <img src="./assets/Q2_HP_Women_s_NR.jpg" />
+      <div class="text-center grid gap-1 mt-2">
+        <p class="text-m uppercase">Women's</p>
+        <p>New Release</p>
+        <p class="text-sm">Shop the latest gear now</p>
+      </div>
+      <div class="overlay"><button class="secondary-btn">Shop Now</button></div>
+    </div>
+    <div class="image-with-overlay">
+      <img src="./assets/Q2_Sharp_Edit_07.jpg" />
+      <div class="text-center grid gap-1 mt-2">
+        <p class="text-m uppercase">Men's</p>
+        <p>New Release</p>
+        <p class="text-sm">This just in - shop our latest arrival</p>
+      </div>
+      <div class="overlay"><button class="secondary-btn">Shop Now</button></div>
+    </div>
+  </div>

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/orders.css" />
+<div>
+  <h1 class="text-center mt-2">My Orders</h1>
+  <% if(orders.length > 0) { %>
+    <div class="orders-container">
+  <% orders.forEach(order => { %>
+    <% let orderTotal = 0 %>
+    <div class="order-card">
+      <div class="order-meta">
+        <p><strong>Order ID:</strong> <%= order._id %></p>
+        <p><strong>Date:</strong> <%= new Date(order.orderedAt).toLocaleDateString() %></p>
+        <p><strong>Status:</strong> <span class="status <%= order.status.toLowerCase() %>"><%= order.status %></span></p>
+      </div>
+
+      <div class="order-items">
+        <% order.items.forEach(({ item, quantity }) => { %>
+          <div class="order-item">
+            <img src="/<%= item.url %>" alt="<%= item.name %>" class="product-img">
+            <div class="item-details">
+              <h4><%= item.name %></h4>
+              <p><%= item.description %></p>
+              <p>Price: <strong>$<%= item.price.toFixed(2) %></strong></p>
+              <p>Quantity: <%= quantity %></p>
+              <p>Total: $<%= (item.price * quantity).toFixed(2) %></p>
+              <% orderTotal += (item.price * quantity) %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    <p class="order-cost">Order Cost: <%= orderTotal %></p>
+  <% }) %>
+  </div>
+  <% } else { %>
+  <p style="text-align: center; color: #999; margin-top: 2rem;">You haven't placed any orders yet.</p>
+  <% } %>
+</div>
