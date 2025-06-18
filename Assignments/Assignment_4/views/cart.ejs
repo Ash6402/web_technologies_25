@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/cart.css" />
+<div class="cart-container">
+  <h2>Cart</h2>
+  <% if(products.length > 0) { %>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Delete</th>
+      </tr>
+    <% products.forEach(p => { %>
+        <tr>
+          <td>
+            <img src="<%= p.url %>" width="60" height="100" style="object-fit: cover; object-position: top" />
+          </td>
+          <td>
+            <%= p.name %>
+          </td>
+          <td>
+            <%= p.price %>
+          </td>
+          <% let quantity = cart.find(item => item.id == p._id).quantity %>
+          <td>
+            <form action="/my-orders/cart/update" method="POST">
+              <input style="width: 60px;" type="number" id="quantity" name="quantity" min="1" value="<%= quantity %>" />
+              <input type="hidden" id="id" name="id" value="<%= p._id %>" />
+              <button class="update-btn">Update</button>
+            </form>
+          </td>
+          <td>
+            <%= quantity * p.price %>
+          </td>
+          <td>
+            <form action="my-orders/cart/remove" method="POST">
+              <input type="hidden" name="id" id="id" value="<%=p._id%>" />
+              <button class="delete-btn">x</button>   
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+      </table>
+  <% } else { %>
+  <p style="color: #333; margin-top: 24px;">Cart is Empty</p>
+  <% } %>
+</div>

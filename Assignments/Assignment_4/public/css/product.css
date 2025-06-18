@@ -114,3 +114,33 @@
   background-color: #333;
   color: #eee;
 }
+
+.success-toast {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  padding: 1rem;
+  color: green;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid green;
+  border-radius: 4px;
+  right: 2rem;
+  transition: transform 600ms ease-in;
+}
+
+.success-toast button {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: black;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.hide {
+  transform: translateX(5000px);
+}

@@ -19,6 +19,7 @@ const homeRoutes = require("./routes/home.routes")
 const authRoutes = require("./routes/auth.routes")
 const myOrderRoutes = require("./routes/my-order.routes")
 const productRoutes = require("./routes/product.routes")
+const cartRoutes = require("./routes/cart.routes")
 
 // data for home page
 // const products = require("./data/products.json")
@@ -52,6 +53,7 @@ app.use("/", homeRoutes)
 app.use("/auth", authRoutes)
 app.use("/my-orders", myOrderRoutes)
 app.use("/product", productRoutes)
+app.use("/cart", cartRoutes)
 
 app.listen(9000, () => {
     console.log("Listening on port 9000")

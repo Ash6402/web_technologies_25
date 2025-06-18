@@ -1,4 +1,5 @@
 const sizes = document.querySelectorAll(".size");
+const closeBtn = document.querySelector(".toast-close")
 
 sizes.forEach((s) => {
   s.addEventListener("click", (e) => {
@@ -11,3 +12,10 @@ sizes.forEach((s) => {
     });
   });
 });
+
+if(closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        document.querySelector(".success-toast").classList.add("hide")
+    })
+}
+

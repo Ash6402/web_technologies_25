@@ -16,11 +16,13 @@
   <div class="carousel mt-2">
   <% products.t_shirts.forEach((item) => { %>
       <div class="carousel-item">
+      <a href="/product/<%= item._id %>">
         <img 
           class="item-img"
           src="<%= item.url %>"
           alt="<%= item.name %>"
         />
+      </a>
        <p class="text-sm mt-2 text-center">
         <%= item.name %>
        </p>

@@ -1,5 +1,13 @@
-<link rel="stylesheet" href="css/product.css" />
+<link rel="stylesheet" href="/css/product.css" />
 
+<% if(success.length > 0) { %>
+  <div class="success-toast">
+  <p>
+    <%= success %>
+  </p>
+  <button class="toast-close" onclick="close()">x</button>
+  </div>
+<% } %>
 <div class="product-page">
   <!-- Left Section -->
   <div class="product-info">
@@ -40,16 +48,15 @@
       <div class="size">XXL</div>
     </div>
 
-    <form action="/my-orders/add" method="POST" class="order-form">
-      <input type="hidden" name="productId" value="<%= product._id %>">
-      
+    <form action="/my-orders/cart/add" method="POST" class="order-form">
+      <input type="hidden" name="id" value="<%= product._id %>">
       <div class="quantity">
         <label for="quantity">Quantity</label>
         <input type="number" name="quantity" id="quantity" min="1" value="1">
       </div>
 
-      <button type="submit">Add to Cart</button>
+      <button>Add to Cart</button>
     </form>
   </div>
-  <script src="js/product.js"></script>
+  <script src="/js/product.js"></script>
 </div>
