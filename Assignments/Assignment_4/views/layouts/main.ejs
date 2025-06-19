@@ -22,7 +22,7 @@
       </div>
       <div class="right">
         <button>Shops</button>
-        <button>Community</button>
+        <button><img src="/assets/logo.svg" /></button>
         <button class="account-btn">Account</button>
       </div>
       <div class="account-dropdown hide">
@@ -33,7 +33,17 @@
           </ul>
         <% } else { %>
           <h2 class="text-center">Hello, <%= user.name %> </h2>
-          <a href="/my-orders">My Orders</a>
+          <a href="/my-orders">
+            <% if(user.isAdmin) { %>
+              Orders
+            <% } else { %>
+              My Orders
+            <% } %>
+          </a>
+
+          <% if(user.isAdmin) { %>
+            <a href="/admin/products">Admin Panel</a>
+          <% } %>
           <form action="/auth/logout" method="POST">
             <button class="logout-btn">Logout</button>
           </form>

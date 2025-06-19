@@ -2,9 +2,15 @@ const Order = require("../models/Order.model");
 const Product = require("../models/Product.model");
 
 exports.myOrder = async (req, res) => {
-  const userEmail = req.session.user.email;
 
-  let orders = await Order.find({ userEmail });
+  const userEmail = req.session.user.email;
+    let orders;
+
+    if(req.session.user.isAdmin) {
+        orders = await Order.find();
+    } else {
+        orders = await Order.find({userEmail});
+    }
 
   orders = await Promise.all(
     orders.map(async (order) => {
@@ -16,10 +22,7 @@ exports.myOrder = async (req, res) => {
     }),
   );
 
-    console.log(orders[0])
-    console.log(orders[0].items)
-
-  res.render("my-orders", { title: "My Orders", orders });
+  res.render("my-orders", { title: req.session.user.isAdmin ? 'Orders' : 'My Orders', orders });
 };
 
 exports.addToCart = async (req, res) => {
