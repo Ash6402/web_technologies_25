@@ -28,5 +28,6 @@ exports.placeOrder = async (req, res) => {
     })
 
     await order.save()
+    req.session.cart = undefined
     res.redirect("/")
 }

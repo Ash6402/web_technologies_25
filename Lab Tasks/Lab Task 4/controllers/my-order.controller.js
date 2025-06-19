@@ -22,7 +22,7 @@ exports.myOrder = async (req, res) => {
     }),
   );
 
-  res.render("my-orders", { title: req.session.user.isAdmin ? 'Orders' : 'My Orders', orders });
+  res.render("my-orders", { title: req.session.user.isAdmin ? 'Orders' : 'My Orders', orders, user: req.session.user });
 };
 
 exports.addToCart = async (req, res) => {

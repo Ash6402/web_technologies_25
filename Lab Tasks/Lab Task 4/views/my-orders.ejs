@@ -13,6 +13,9 @@
       </div>
 
       <div class="order-items">
+        <% if(user.isAdmin) { %>
+         <div style="display: flex; gap: 0.4rem;"> Customer Email: <h4> <%= order.userEmail %> </h4> </div>
+        <% } %>
         <% order.items.forEach(({ item, quantity }) => { %>
           <div class="order-item">
             <img src="/<%= item.url %>" alt="<%= item.name %>" class="product-img">
