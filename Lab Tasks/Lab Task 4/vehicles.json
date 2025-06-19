@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Civic 2022",
+    "brand": "Honda",
+    "price": 25000,
+    "type": "sedan",
+    "image": "civic-2022.jpg"
+  },
+  {
+    "name": "Corolla Cross",
+    "brand": "Toyota",
+    "price": 28000,
+    "type": "SUV",
+    "image": "corolla-cross.jpg"
+  },
+  {
+    "name": "F-150 Lightning",
+    "brand": "Ford",
+    "price": 55000,
+    "type": "truck",
+    "image": "f150-lightning.jpg"
+  },
+  {
+    "name": "Model Y",
+    "brand": "Tesla",
+    "price": 48000,
+    "type": "SUV",
+    "image": "model-y.jpg"
+  },
+  {
+    "name": "Accord Hybrid",
+    "brand": "Honda",
+    "price": 32000,
+    "type": "sedan",
+    "image": "accord-hybrid.jpg"
+  },
+  {
+    "name": "Ranger XLT",
+    "brand": "Ford",
+    "price": 35000,
+    "type": "truck",
+    "image": "ranger-xlt.jpg"
+  }
+]

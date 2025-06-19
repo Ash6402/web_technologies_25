@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/admin.css" />
+<h2>All Products</h2>
+<a href="/admin/products/add" class="add-new-btn">Add New Product</a>
+
+<table class="admin-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price ($)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.category %></td>
+        <td><%= product.price.toFixed(2) %></td>
+        <td>
+          <a href="/admin/products/edit/<%= product._id %>">Edit</a>
+          <form action="/admin/products/delete/<%= product._id %>" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Delete this product?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

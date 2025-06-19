@@ -2,9 +2,10 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel= "stylesheet" href="/css/style.css">
     <link rel= "stylesheet" href="/css/index.css">
-    <link rel="icon" href="assets/logo.svg" />
+    <link rel="icon" href="/assets/logo.svg" />
   </head>
   <body>
     <header>
@@ -13,16 +14,16 @@
         <button>Men</button>
         <button>Women</button>
         <button>Kids</button>
-        <button>SubCulture</button>
+        <a href="/vehicles" style="width: fit-content; margin-top: 0;"><button>Vehicles</button></a>
       </div>
       <div class="center">
-          <a href="/">
-            <img src="./assets/logo.svg" width="50" alt="Brand Logo" />
+          <a href="/" style="margin-top: 0;">
+            <img src="/assets/logo.svg" width="50" alt="Brand Logo" />
           </a>
       </div>
       <div class="right">
         <button>Shops</button>
-        <button>Community</button>
+        <a style="width: 50px;" href="/cart"><button style="width: 50px; padding-block: 0; text-align: center; transform: translateY(-10px);"><img src="/assets/cart.png" width="30px" height="30px" /></button></a>
         <button class="account-btn">Account</button>
       </div>
       <div class="account-dropdown hide">
@@ -33,7 +34,20 @@
           </ul>
         <% } else { %>
           <h2 class="text-center">Hello, <%= user.name %> </h2>
-          <a href="/my-orders">My Orders</a>
+          <a href="/my-orders">
+            <% if(user.isAdmin) { %>
+              Orders
+            <% } else { %>
+              My Orders
+            <% } %>
+          </a>
+
+          <% if(user.isAdmin) { %>
+            <a href="/admin/products">Admin Panel</a>
+          <% } %>
+          <% if(user.isAdmin) { %>
+            <a href="/vehicles/admin">Vehicles Admin</a>
+          <% } %>
           <form action="/auth/logout" method="POST">
             <button class="logout-btn">Logout</button>
           </form>

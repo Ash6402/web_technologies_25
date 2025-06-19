@@ -1,0 +1,150 @@
+:root {
+  --primary: #1d1f22;
+  --accent: #007aff;
+  --bg: #f9f9f9;
+  --text: #333;
+  --light: #ffffff;
+  --border: #ddd;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding: 0 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+}
+
+.admin-form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: var(--light);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-form label {
+  font-weight: 600;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.admin-form button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.admin-form button:hover {
+  background: #005dd1;
+}
+
+.admin-table {
+  width: 100%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: var(--light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table th {
+  background: #f2f2f2;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.admin-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.admin-table td a {
+  margin-right: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-table td form {
+  display: inline;
+}
+
+.admin-table td button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-table td button:hover {
+  background: #c0392b;
+}
+
+.order-card {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: var(--light);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.order-card p {
+  margin: 5px 0;
+}
+
+.order-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.add-new-btn {
+  float: right;
+  background-color: #333;
+  color: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  margin-right: 100px;
+}

@@ -1,0 +1,17 @@
+<h2 class="text-center my-4">Available Vehicles</h2>
+<div class="container">
+  <div class="row">
+    <% vehicles.forEach(vehicle => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/uploads/<%= vehicle.image %>" class="card-img-top" alt="<%= vehicle.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= vehicle.name %> - <%= vehicle.brand %></h5>
+            <p class="card-text">Type: <%= vehicle.type %></p>
+            <p class="card-text">Price: $<%= vehicle.price %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>

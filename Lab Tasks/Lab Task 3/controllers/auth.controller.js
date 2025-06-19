@@ -23,6 +23,7 @@ exports.postLogin = async (req, res) => {
   req.session.user = {
     name: user.name,
     email: user.email,
+    isAdmin: user.isAdmin
   };
 
   res.redirect("/");

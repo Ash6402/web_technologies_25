@@ -1,0 +1,42 @@
+{
+  "t_shirts": [
+    {
+      "name": "Ringer T-Shirt",
+      "url": "assets/M3519_608_V2_BASELINE_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "T-Shirt White",
+      "url": "assets/M1600_X06_V2_Q125_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "T-Shirt Blue",
+      "url": "assets/M8679_S64_V2_Q125_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "T-Shirt Black",
+      "url": "assets/M3519_W75_V2_Q125_MOD1_FRONT.JPG"
+    }
+  ],
+  "jackets": [
+    {
+      "name": "Brentham Jacker",
+      "url": "assets/J2660_S65_V2_Q125_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "The Brentham Jacker",
+      "url": "assets/J8572_363_V2_Q125_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "Overhead Smoke Jacket",
+      "url": "assets/J2660_248_V2_BASELINE_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "Twill Tennis Jacket",
+      "url": "assets/J7320_795_V2_BASELINE_MOD1_FRONT.JPG"
+    },
+    {
+      "name": "Textured Tennis Jacket",
+      "url": "assets/J2660_350_V2_BASELINE_MOD1_FRONT.JPG"
+    }
+  ]
+}
